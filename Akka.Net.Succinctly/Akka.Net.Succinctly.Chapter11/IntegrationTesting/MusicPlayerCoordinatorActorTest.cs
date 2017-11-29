@@ -14,7 +14,7 @@ namespace Akka.Net.Succinctly.Chapter11.IntegrationTesting
             TestActorRef<MusicPlayerCoordinatorActor> actor =
                 ActorOfAsTestActorRef(() => new MusicPlayerCoordinatorActor(), "Coordinator");
 
-            var songMessage = new PlaySongMessage("Bohemian Rapsody", "John");
+            var songMessage = new PlaySongMessage("Bohemian Rhapsody", "John");
 
             actor.Tell(songMessage);
 
@@ -33,7 +33,7 @@ namespace Akka.Net.Succinctly.Chapter11.IntegrationTesting
             var parentProps = Props.Create(() => new MusicPlayerCoordinatorActor());
             var coordinator = ActorOfAsTestActorRef<MusicPlayerCoordinatorActor>(parentProps, TestActor);
 
-            var songMessage = new PlaySongMessage("Bohemian Rapsody", "John");
+            var songMessage = new PlaySongMessage("Bohemian Rhapsody", "John");
 
             coordinator.Tell(songMessage);
             ExpectMsg("Item received");

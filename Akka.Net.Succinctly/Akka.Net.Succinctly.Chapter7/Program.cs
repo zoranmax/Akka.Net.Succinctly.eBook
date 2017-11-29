@@ -12,7 +12,7 @@ namespace Akka.Net.Succinctly.Chapter7
             IActorRef dispatcher = system.ActorOf<MusicPlayerCoordinatorActor>("player-coordinator");
 
             dispatcher.Tell(new PlaySongMessage("Smoke on the water", "John"));
-            dispatcher.Tell(new PlaySongMessage("Another brick on the wall", "Mike"));
+            dispatcher.Tell(new PlaySongMessage("Another brick in the wall", "Mike"));
 
             dispatcher.Tell(new StopPlayingMessage("John"));
             dispatcher.Tell(new StopPlayingMessage("Mike"));

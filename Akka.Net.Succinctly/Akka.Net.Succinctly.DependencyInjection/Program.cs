@@ -25,7 +25,7 @@ namespace Akka.Net.Succinctly.DependencyInjection
 
             IActorRef musicActor = system.ActorOf(system.DI().Props<MusicActor>(), "MusicActor");
 
-            musicActor.Tell("Bohemian Rapsody");
+            musicActor.Tell("Bohemian Rhapsody");
 
             Console.Read();
             system.Terminate();

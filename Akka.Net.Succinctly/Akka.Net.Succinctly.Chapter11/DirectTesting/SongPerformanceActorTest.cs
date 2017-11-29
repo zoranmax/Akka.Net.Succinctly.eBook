@@ -19,7 +19,7 @@ namespace Akka.Net.Succinctly.Chapter11.DirectTesting
         {
             var actor = new SongPerformanceActor();
 
-            var songMessage = new PlaySongMessage("Bohemian Rapsody", "John");
+            var songMessage = new PlaySongMessage("Bohemian Rhapsody", "John");
 
             actor.IncreaseSongCounter(songMessage);
 

@@ -13,7 +13,7 @@ namespace Akka.Net.Succinctly.Chapter10
 
             var dispatcher = system.ActorOf(Props.Create<MusicPlayerCoordinatorActor>());
 
-            dispatcher.Tell(new PlaySongMessage("Bohemian Rapsody", "John"));
+            dispatcher.Tell(new PlaySongMessage("Bohemian Rhapsody", "John"));
             dispatcher.Tell(new PlaySongMessage("Stairway to heaven", "Andrew"));
 
             Console.Read();

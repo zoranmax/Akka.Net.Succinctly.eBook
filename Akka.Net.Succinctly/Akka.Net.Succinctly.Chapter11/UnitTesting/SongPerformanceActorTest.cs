@@ -14,7 +14,7 @@ namespace Akka.Net.Succinctly.Chapter11.UnitTesting
         {
             TestActorRef<SongPerformanceActor> actor = ActorOfAsTestActorRef<SongPerformanceActor>();
 
-            var songMessage = new PlaySongMessage("Bohemian Rapsody", "John");
+            var songMessage = new PlaySongMessage("Bohemian Rhapsody", "John");
 
             actor.Tell(songMessage);
 
@@ -26,7 +26,7 @@ namespace Akka.Net.Succinctly.Chapter11.UnitTesting
         {
             TestActorRef<SongPerformanceActor> actor = ActorOfAsTestActorRef<SongPerformanceActor>();
 
-            var songMessage = new PlaySongMessage("Bohemian Rapsody", "John");
+            var songMessage = new PlaySongMessage("Bohemian Rhapsody", "John");
 
             actor.Tell(songMessage);
 
@@ -37,7 +37,7 @@ namespace Akka.Net.Succinctly.Chapter11.UnitTesting
 
             CounterIncreasedMessage counter = ExpectMsg<CounterIncreasedMessage>(TimeSpan.FromSeconds(5));
 
-            Assert.That(counter.Song == "Bohemian Rapsody");
+            Assert.That(counter.Song == "Bohemian Rhapsody");
             Assert.That(counter.Count == 1);
         }
     }

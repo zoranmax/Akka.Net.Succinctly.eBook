@@ -16,10 +16,10 @@ namespace Akka.Net.Succinctly.Chapter6
             IActorRef musicPlayer = system.ActorOf<MusicPlayerActor>("musicPlayer");
 
             musicPlayer.Tell(new PlaySongMessage("Smoke on the water"));
-            musicPlayer.Tell(new PlaySongMessage("Another brick on the wall"));
+            musicPlayer.Tell(new PlaySongMessage("Another brick in the wall"));
             musicPlayer.Tell(new StopPlayingMessage());
             musicPlayer.Tell(new StopPlayingMessage());
-            musicPlayer.Tell(new PlaySongMessage("Another brick on the wall"));
+            musicPlayer.Tell(new PlaySongMessage("Another brick in the wall"));
 
             Console.Read();
             system.Terminate();

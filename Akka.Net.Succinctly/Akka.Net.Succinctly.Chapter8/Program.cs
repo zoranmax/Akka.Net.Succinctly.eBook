@@ -16,7 +16,7 @@ namespace Akka.Net.Succinctly.Chapter8
 
             dispatcher.Tell(new PlaySongMessage("Smoke on the water", "John"));
             dispatcher.Tell(new PlaySongMessage("Smoke on the water", "Mike"));
-            dispatcher.Tell(new PlaySongMessage("Another Brick on the wall", "Andrew"));
+            dispatcher.Tell(new PlaySongMessage("Another brick in the wall", "Andrew"));
             Console.Read();
 
             system.Terminate();

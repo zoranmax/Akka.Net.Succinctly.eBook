@@ -17,9 +17,9 @@ namespace Akka.Net.Succinctly.Chapter9.Actors
         {
             CurrentSong = message;
 
-            if (message.Song == "Bohemian Rapsody")
+            if (message.Song == "Bohemian Rhapsody")
             {
-                throw new SongNotAvailableException("Bohemian Rapsody is not available");
+                throw new SongNotAvailableException("Bohemian Rhapsody is not available");
             }
 
             if (message.Song == "Stairway to heaven")
